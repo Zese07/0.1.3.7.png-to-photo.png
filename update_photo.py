@@ -1,10 +1,16 @@
 from PIL import Image
+import random
 
 # Open the original photo.png image
 original_image = Image.open("photo.png")
 
-# Open the new.png image
-new_image = Image.open("new.png")
+x = random.randint(1,3)
+if x == 1:
+    new_image = Image.open("0.png")
+elif x == 2:
+    new_image = Image.open("1.png")
+else:
+    new_image = Image.open("7.png")
 
 # Replace the original image with the new image
 original_image.paste(new_image)
