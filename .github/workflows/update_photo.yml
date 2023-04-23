@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main  # Replace with your desired branch name
+  schedule:
+    - cron: "*/1 * * * *"
 
 jobs:
   update_photo:
