@@ -1,7 +1,7 @@
 from PIL import Image
 import random
 
-image_files = ['0.png', '1.png', '7.png']
+image_files = ['0.png', '1.png', '3.png', '7.png']
 new_image_filename = random.choice(image_files)
 new_image = Image.open(new_image_filename)
 
