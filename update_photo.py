@@ -1,21 +1,12 @@
 from PIL import Image
 import random
 
-# Open the original photo.png image
-original_image = Image.open("photo.png")
+image_files = ['0.png', '1.png', '7.png']
+new_image_filename = random.choice(image_files)
+new_image = Image.open(new_image_filename)
 
-x = random.randint(1,3)
-if x == 1:
-    new_image = Image.open("0.png")
-elif x == 2:
-    new_image = Image.open("1.png")
-else:
-    new_image = Image.open("7.png")
+photo = Image.open('photo.png')
+photo = new_image.copy()
+photo.save('photo.png')
 
-# Replace the original image with the new image
-original_image.paste(new_image)
-
-# Save the updated image as photo.png
-original_image.save("photo.png")
-
-print("Successfully updated photo.png with new.png")
+print("Photo updated successfully!")
